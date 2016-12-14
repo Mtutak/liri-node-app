@@ -1,7 +1,13 @@
 # Logs
-logs
+log
 *.log
 npm-debug.log*
+
+#Keys
+keys.js
+
+#DS
+.DS_Store
 
 # Runtime data
 pids
