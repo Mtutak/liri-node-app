@@ -125,16 +125,16 @@ function movieCommand(file, parameter) {
                 console.log("Successful OMDB Call");
                 //Getting data from returned JSON object body
                 //show OMDB Search results
-                console.log(body);
+                var movie = JSON.parse(body);
                 console.log(" =============== ");
-                console.log('* Movie Title: ' + body.Title);
-                console.log('* Release Year: ' + body.Year);
-                console.log('* IMDB Rating: ' + body.imdbRating);
-                console.log('* Country: ' + body.Country);
-                console.log('* Plot: ' + body.Plot);
-                console.log('* Actors: ' + body.Actors);
-                console.log('* Rotten Tomatoes Rating: ' + body.tomatoRating);
-                console.log('* Rotten Tomatoes URL: ' + body.tomatoURL);
+                console.log('* Movie Title: ' + movie.Title);
+                console.log('* Release Year: ' + movie.Year);
+                console.log('* IMDB Rating: ' + movie.imdbRating);
+                console.log('* Country: ' + movie.Country);
+                console.log('* Plot: ' + movie.Plot);
+                console.log('* Actors: ' + movie.Actors);
+                console.log('* Rotten Tomatoes Rating: ' + movie.tomatoRating);
+                console.log('* Rotten Tomatoes URL: ' + movie.tomatoURL);
                 console.log(" ================ ");
                 userCommand = "movie-this," + movieName + ",";
                 storingFile(userCommand);
